@@ -1,0 +1,37 @@
+1. Software Development Life Cycle (SDLC)
+The Software Development Life Cycle (SDLC) is a systematic process for planning, creating, testing, deploying, and maintaining software applications. It provides a structured framework for developing high-quality software that meets user requirements and is delivered on time and within budget.
+
+Steps in the SDLC:
+i). Planning:
+This is the phase where the project scope is defined by outlining specific goals, deliverables, and constraints. Clear project objectives and requirements are established through collaboration with stakeholders. A comprehensive project plan is developed, delineating timelines, milestones, and resource allocation to ensure efficient execution.
+
+ii). Analysis:
+In this phase, a thorough investigation is conducted to gather and analyze user requirements, understanding the needs and expectations of key stakeholders. These requirements are translated into detailed specifications that serve as the foundation for the software development process. The functional and non-functional aspects of the software are clearly articulated to guide subsequent phases.
+
+iii). Design:
+This is the phase where the software is architected by creating a robust and scalable framework that aligns with the project's objectives. High-level and low-level design documents are developed to illustrate the overall structure and intricate details of the software. The design is ensured to be in line with best practices and industry standards to facilitate seamless development.
+
+iv). Implementation:
+In this phase, the design specifications are translated into executable code, adhering to coding standards and practices. Clear, concise, and maintainable code is written that reflects the outlined design. Thorough unit testing is conducted to validate the functionality of individual components, identifying and rectifying any discrepancies.
+
+v). Testing:
+This is the phase where system testing is executed to validate the entire software application, ensuring all components work cohesively. Rigorous testing methodologies are implemented to identify and address defects, ensuring the software meets quality standards. The software is iteratively refined through testing feedback to enhance overall reliability.
+
+vi). Deployment:
+During this phase, the finalized software is deployed to production environments, following a well-defined deployment plan. A smooth transition from the development phase to live production is ensured, minimizing downtime and potential disruptions. The software's functionality is validated in the production environment to guarantee optimal performance.
+
+vii). Maintenance:
+This is the phase where ongoing support and maintenance are provided to address any issues that arise post-deployment. Updates and enhancements are released based on user feedback and evolving requirements. The software is continuously monitored and optimized to ensure its longevity and effectiveness in meeting user needs.
+
+
+
+2. Examples of SDLC in 3 companies
+i) Atlassian
+Atlassian develops collaboration and productivity software, and its SDLC involves Agile methodologies. Given its focus on providing tools for project management and collaboration, the development process could include iterative releases and frequent updates based on user feedback.
+
+ii) Housing Finance Bank
+Housing Finance Bank is a Financial Company and its SDLC involves Agile methodologies as well. It focuses on providing financial services to customers and the development process includes iterative releases and frequent updates based on user feedback.
+
+iii) NASA
+NASA, or the National Aeronautics and Space Administration, uses software for many purposes, including controlling rockets, interpreting data, and handling finances and human resources, in such industries where precision and thorough testing are critical, the waterfall model is still used. As a result, NASA's Space Flight Program and Project Management Handbook, which all missions must follow, mandates a waterfall methodology.
+
