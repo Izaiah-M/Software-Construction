@@ -29,15 +29,15 @@ class BonusCalculator:
         
     def calculate_manager_bonus(self):
         return 1000
+    
+    def calculate_developer_bonus(self):
+        return 500
 
 class Manager(Employee):
     def manage_team(self):
         print(f"{self.name} is managing the team.")
 
 class Developer(Employee):
-    def calculate_developer_bonus(self):
-        return 500
-
     def code_review(self):
         print(f"{self.name} is conducting a code review.")
 
