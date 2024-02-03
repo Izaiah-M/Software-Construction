@@ -23,9 +23,9 @@ class Report:
 class BonusCalculator:
     def calculate_bonus(self, employee):
         if employee.role == "Manager":
-            return employee.calculate_manager_bonus()
+            return self.calculate_manager_bonus()
         elif employee.role == "Developer":
-            return employee.calculate_developer_bonus()
+            return self.calculate_developer_bonus()
         
     def calculate_manager_bonus(self):
         return 1000
