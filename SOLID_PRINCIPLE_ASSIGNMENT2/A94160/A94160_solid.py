@@ -1,60 +1,88 @@
-# Name: Mukisa Isaiah
-# Access Number: A94160
+from abc import ABC, abstractmethod
 
+# This is the base class representing an employee with a name and role
 class Employee:
     def __init__(self, name, role):
         self.name = name
         self.role = role
 
-class Report:
-    def generate_report(self, employee):
-        if employee.role == "Manager":
-            self.write_manager_report(employee)
-        elif employee.role == "Developer":
-            self.write_developer_report(employee)
+# Interface defining the contract for writing a report
+class ReportWriter(ABC):
+    @abstractmethod
+    def write_report(self, employee):
+        pass
 
-    def write_manager_report(self, manager):
+# Interface defining the contract for calculating bonuses
+class BonusCalculator(ABC):
+    @abstractmethod
+    def calculate_bonus(self, employee):
+        pass
+
+# This is the implementation for writing a report for a Manager
+class ManagerReportWriter(ReportWriter):
+    def write_report(self, manager):
         print(f"Manager Report: {manager.name}")
 
-    def write_developer_report(self, developer):
+# This is the implementation for writing a report for a Developer
+class DeveloperReportWriter(ReportWriter):
+    def write_report(self, developer):
         print(f"Developer Report: {developer.name}")
 
-
-class BonusCalculator:
-    def calculate_bonus(self, employee):
-        if employee.role == "Manager":
-            return self.calculate_manager_bonus()
-        elif employee.role == "Developer":
-            return self.calculate_developer_bonus()
-        
-    def calculate_manager_bonus(self):
+# This is the implementation for calculating bonuses for a Manager
+class ManagerBonusCalculator(BonusCalculator):
+    def calculate_bonus(self, manager):
         return 1000
-    
-    def calculate_developer_bonus(self):
+
+# This is the implementation for calculating bonuses for a Developer
+class DeveloperBonusCalculator(BonusCalculator):
+    def calculate_bonus(self, developer):
         return 500
 
-class Manager(Employee):
+# Interface defining the contract for managerial roles
+class ManagerRole(ABC):
+    @abstractmethod
+    def manage_team(self):
+        pass
+
+# Interface defining the contract for developer roles
+class DeveloperRole(ABC):
+    @abstractmethod
+    def code_review(self):
+        pass
+
+# This is the implementation of a Manager with specific role-related actions
+class Manager(Employee, ManagerRole):
     def manage_team(self):
         print(f"{self.name} is managing the team.")
 
-class Developer(Employee):
+# This is the implementation of a Developer with specific role-related actions
+class Developer(Employee, DeveloperRole):
     def code_review(self):
         print(f"{self.name} is conducting a code review.")
 
 if __name__ == "__main__":
+    # Creating instances of Manager and Developer
     manager = Manager("Alice", "Manager")
     developer = Developer("Bob", "Developer")
 
-    report_generator = Report()
-    report_generator.generate_report(manager)
-    report_generator.generate_report(developer)
+    # Creating instances of report writers and bonus calculators for each role
+    manager_report_writer = ManagerReportWriter()
+    developer_report_writer = DeveloperReportWriter()
+    manager_bonus_calculator = ManagerBonusCalculator()
+    developer_bonus_calculator = DeveloperBonusCalculator()
 
-    bonus_calculator = BonusCalculator()
-    manager_bonus = bonus_calculator.calculate_bonus(manager)
-    developer_bonus = bonus_calculator.calculate_bonus(developer)
+    # Generating reports for Manager and Developer
+    manager_report_writer.write_report(manager)
+    developer_report_writer.write_report(developer)
 
+    # Calculating bonuses for Manager and Developer
+    manager_bonus = manager_bonus_calculator.calculate_bonus(manager)
+    developer_bonus = developer_bonus_calculator.calculate_bonus(developer)
+
+    # Displaying the calculated bonuses
     print(f"Manager Bonus: ${manager_bonus}")
     print(f"Developer Bonus: ${developer_bonus}")
 
+    # Performing role-specific actions
     manager.manage_team()
     developer.code_review()
