@@ -26,11 +26,11 @@ class BonusCalculator:
             return employee.calculate_manager_bonus()
         elif employee.role == "Developer":
             return employee.calculate_developer_bonus()
-
-class Manager(Employee):
+        
     def calculate_manager_bonus(self):
         return 1000
 
+class Manager(Employee):
     def manage_team(self):
         print(f"{self.name} is managing the team.")
 
