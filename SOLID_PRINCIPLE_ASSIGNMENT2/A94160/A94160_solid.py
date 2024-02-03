@@ -86,3 +86,11 @@ if __name__ == "__main__":
     # Performing role-specific actions
     manager.manage_team()
     developer.code_review()
+
+
+# Changes Made:
+# Introduced interfaces for report writing and bonus calculation.
+# Implemented concrete classes for each role's report writing and bonus calculation.
+# Used dependency injection to decouple report generation and bonus calculation from specific implementations.
+# Ensured that each role adheres to its specific interface, promoting adherence to LSP.
+# Reorganized the code to adhere to SRP, OCP, ISP, and DIP principles.
