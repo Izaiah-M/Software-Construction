@@ -59,3 +59,11 @@ if __name__ == "__main__":
     # Generating reports
     manager_report_generator.generate_report(manager)
     developer_report_generator.generate_report(developer)
+
+    # Creating instances for bonus calculation
+    manager_bonus_calculator = ManagerBonusCalculator()
+    developer_bonus_calculator = DeveloperBonusCalculator()
+
+    # Calculating and printing bonuses
+    manager_bonus = manager_bonus_calculator.calculate_bonus(manager)
+    developer_bonus = developer_bonus_calculator.calculate_bonus(developer)
