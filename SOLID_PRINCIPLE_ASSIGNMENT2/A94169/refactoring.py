@@ -10,4 +10,7 @@ class ReportGenerator:
 class ManagerReportGenerator(ReportGenerator):
     def generate_report(self, manager):
         print(f"Manager Report: {manager.name}")
-
+# Concrete class for developer report generation
+class DeveloperReportGenerator(ReportGenerator):
+    def generate_report(self, developer):
+        print(f"Developer Report: {developer.name}")
