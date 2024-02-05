@@ -26,4 +26,10 @@ class BonusCalculator:
 # Concrete class for manager bonus calculation
 class ManagerBonusCalculator(BonusCalculator):
     def calculate_bonus(self, manager):
-        return manager.calculate_manager_bonus()    
+        return manager.calculate_manager_bonus()   
+
+# Concrete class for developer bonus calculation
+class DeveloperBonusCalculator(BonusCalculator):
+    def calculate_bonus(self, developer):
+        return developer.calculate_developer_bonus()
+    
