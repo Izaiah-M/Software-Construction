@@ -55,3 +55,7 @@ if __name__ == "__main__":
     # Creating instances for report generation
     manager_report_generator = ManagerReportGenerator()
     developer_report_generator = DeveloperReportGenerator()
+
+    # Generating reports
+    manager_report_generator.generate_report(manager)
+    developer_report_generator.generate_report(developer)
