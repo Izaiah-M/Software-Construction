@@ -33,3 +33,9 @@ class DeveloperBonusCalculator(BonusCalculator):
     def calculate_bonus(self, developer):
         return developer.calculate_developer_bonus()
     
+class Manager(Employee):
+    def calculate_manager_bonus(self):
+        return 1000
+
+    def manage_team(self):
+        print(f"{self.name} is managing the team.")
