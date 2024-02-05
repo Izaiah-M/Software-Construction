@@ -70,3 +70,7 @@ if __name__ == "__main__":
 
     print(f"Manager Bonus: ${manager_bonus}")
     print(f"Developer Bonus: ${developer_bonus}")
+
+    # Additional actions specific to each employee type
+    manager.manage_team()
+    developer.code_review()
