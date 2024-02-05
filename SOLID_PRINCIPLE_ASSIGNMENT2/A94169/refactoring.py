@@ -51,3 +51,7 @@ if __name__ == "__main__":
     # Example usage
     manager = Manager("Alice", "Manager")
     developer = Developer("Bob", "Developer")
+
+    # Creating instances for report generation
+    manager_report_generator = ManagerReportGenerator()
+    developer_report_generator = DeveloperReportGenerator()
