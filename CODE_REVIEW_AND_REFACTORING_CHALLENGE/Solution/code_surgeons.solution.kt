@@ -1,8 +1,10 @@
 import android.os.Bundle
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 
 class LoginActivity : AppCompatActivity() {
 
+    private val TAG = "LoginActivity"
     private val DEFAULT_USERNAME = "admin"
     private val DEFAULT_PASSWORD = "admin"
 
@@ -15,14 +17,15 @@ class LoginActivity : AppCompatActivity() {
 
     private fun performLogin(username: String, password: String) {
         if (isCredentialsValid(username, password)) {
-            // Login successful
+            Log.d(TAG, "Login successful")
+            // Show welcome message or navigate to next screen
         } else {
-            // Invalid credentials
+            Log.d(TAG, "Invalid credentials")
+            // Show error message
         }
     }
 
     private fun isCredentialsValid(username: String, password: String): Boolean {
         return username == DEFAULT_USERNAME && password == DEFAULT_PASSWORD
     }
-
 }
