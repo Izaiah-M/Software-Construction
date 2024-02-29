@@ -3,6 +3,7 @@ from typing import Union
 
 class Calculator:
     def __init__(self, num1: Union[int, float], num2: Union[int, float]):
+
         """Initialize a Calculator object with two numeric values."""
         self.num1 = num1  # Assign the first numeric value to the instance variable num1
         self.num2 = num2  # Assign the second numeric value to the instance variable num2
@@ -34,7 +35,7 @@ if __name__ == "__main__":
 
     subtract = calc.subtract()
     print(f"Subtracted {calc.num1} and {calc.num2} to get: {subtract}")
-
+    
     divide = calc.divide()
     print(f"Divided {calc.num1} and {calc.num2} to get: {divide}")
 

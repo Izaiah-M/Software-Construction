@@ -1,7 +1,5 @@
 # Green Phase
 
-# Importing the unittest module for later use in testing
-import unittest
 
 # Defining the Calculator class
 class Calculator:
