@@ -1,6 +1,5 @@
+#Refactor Phase
 from typing import Union
-=======
-
 
 class Calculator:
     def __init__(self, num1: Union[int, float], num2: Union[int, float]):
