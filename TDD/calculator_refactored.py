@@ -6,15 +6,14 @@ class Calculator:
         self.num1 = num1
         self.num2 = num2
 
+    def add(self):
+        return self.num1 + self.num2
 
-    def add(self, x, y):
-        return x + y
+    def subtract(self):
+        return self.num1 - self.num2
 
-    def subtract(self, x, y):
-        return x - y
-
-    def multiply(self, x, y):
-        return x * y
+    def multiply(self):
+        return self.num1 * self.num2
 
     def divide(self):
         if self.num2 == 0:
@@ -29,11 +28,11 @@ if __name__ == "__main__":
     print(f"Added {calc.num1} and {calc.num2} to get: {add}")
 
     subtract = calc.subtract()
-    print(f"Subtracted {calc.num1} and {calc.num2} to get: {add}")
+    print(f"Subtracted {calc.num1} and {calc.num2} to get: {subtract}")
 
 
     divide = calc.divide()
-    print(f"Divided {calc.num1} and {calc.num2} to get: {add}")
+    print(f"Divided {calc.num1} and {calc.num2} to get: {divide}")
 
     multiply = calc.multiply()
-    print(f"Multiplied {calc.num1} and {calc.num2} to get: {add}")
+    print(f"Multiplied {calc.num1} and {calc.num2} to get: {multiply}")
