@@ -1,4 +1,12 @@
+from typing import Union
+
 class Calculator:
+
+    def _init_(self, num1: Union[int, float], num2: Union[int, float]):
+        self.num1 = num1
+        self.num2 = num2
+
+
     def add(self, x, y):
         return x + y
 
@@ -12,3 +20,5 @@ class Calculator:
         if y == 0:
             raise ValueError("Cannot divide by zero!")
         return x / y
+
+   
